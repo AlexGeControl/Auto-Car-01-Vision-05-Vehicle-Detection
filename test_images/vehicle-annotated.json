@@ -1,0 +1,415 @@
+[
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 92.0,
+                "width": 138.0,
+                "x": 811.0,
+                "y": 407.0
+            },
+            {
+                "class": "rect",
+                "height": 113.0,
+                "width": 231.0,
+                "x": 1045.0,
+                "y": 401.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test1.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test2.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 58.0,
+                "width": 96.0,
+                "x": 869.0,
+                "y": 412.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test3.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 93.0,
+                "width": 143.0,
+                "x": 806.0,
+                "y": 406.0
+            },
+            {
+                "class": "rect",
+                "height": 110.0,
+                "width": 224.0,
+                "x": 1034.0,
+                "y": 397.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test4.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 91.0,
+                "width": 132.0,
+                "x": 809.0,
+                "y": 403.0
+            },
+            {
+                "class": "rect",
+                "height": 127.0,
+                "width": 202.0,
+                "x": 1078.0,
+                "y": 395.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test5.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 95.0,
+                "width": 140.0,
+                "x": 808.0,
+                "y": 408.0
+            },
+            {
+                "class": "rect",
+                "height": 95.0,
+                "width": 198.0,
+                "x": 1006.0,
+                "y": 404.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test6.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 93.0,
+                "width": 142.0,
+                "x": 804.0,
+                "y": 407.0
+            },
+            {
+                "class": "rect",
+                "height": 101.0,
+                "width": 194.0,
+                "x": 1000.0,
+                "y": 402.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-1.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 94.0,
+                "width": 147.0,
+                "x": 801.0,
+                "y": 407.0
+            },
+            {
+                "class": "rect",
+                "height": 97.0,
+                "width": 195.0,
+                "x": 999.0,
+                "y": 403.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-2.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 93.0,
+                "width": 143.0,
+                "x": 804.0,
+                "y": 407.0
+            },
+            {
+                "class": "rect",
+                "height": 100.0,
+                "width": 197.0,
+                "x": 1000.0,
+                "y": 402.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-3.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-4.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-5.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-6.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-7.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-8.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 95.0,
+                "width": 146.0,
+                "x": 804.0,
+                "y": 407.0
+            },
+            {
+                "class": "rect",
+                "height": 101.0,
+                "width": 200.0,
+                "x": 1008.0,
+                "y": 402.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-9.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-10.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-11.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-12.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-13.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-14.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-15.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-16.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-17.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-18.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-19.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-20.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-21.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-22.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-23.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-24.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-25.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-26.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-27.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-28.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-29.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-30.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-31.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-32.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-33.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-34.jpg"
+    },
+    {
+        "annotations": [],
+        "class": "image",
+        "filename": "test_images/test-video-frame-35.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 90.0,
+                "width": 137.0,
+                "x": 810.0,
+                "y": 409.0
+            },
+            {
+                "class": "rect",
+                "height": 107.0,
+                "width": 222.0,
+                "x": 1042.0,
+                "y": 402.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-36.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 88.0,
+                "width": 141.0,
+                "x": 808.0,
+                "y": 411.0
+            },
+            {
+                "class": "rect",
+                "height": 108.0,
+                "width": 223.0,
+                "x": 1040.0,
+                "y": 399.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-37.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 87.0,
+                "width": 136.0,
+                "x": 810.0,
+                "y": 410.0
+            },
+            {
+                "class": "rect",
+                "height": 105.0,
+                "width": 223.0,
+                "x": 1042.0,
+                "y": 402.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-38.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 88.0,
+                "width": 137.0,
+                "x": 810.0,
+                "y": 410.0
+            },
+            {
+                "class": "rect",
+                "height": 109.0,
+                "width": 228.0,
+                "x": 1043.0,
+                "y": 400.0
+            }
+        ],
+        "class": "image",
+        "filename": "test_images/test-video-frame-39.jpg"
+    }
+]

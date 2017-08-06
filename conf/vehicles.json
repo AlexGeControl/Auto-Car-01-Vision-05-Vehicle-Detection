@@ -1,0 +1,105 @@
+{
+	"vehicle_dataset": "data/vehicles/*/*.png",
+	"vehicle_far_dataset": "data/vehicles/GTI_Far/*.png",
+	"vehicle_left_dataset": "data/vehicles/GTI_Left/*.png",
+	"vehicle_right_dataset": "data/vehicles/GTI_Right/*.png",
+	"vehicle_middle_close_dataset": "data/vehicles/GTI_MiddleClose/*.png",
+	"vehicle_extracted_dataset": "data/vehicles/KITTI_extracted/*.png",
+
+	"non_vehicle_dataset": "data/non-vehicles/*/*.png",
+	"non_vehicle_gti_dataset": "data/non-vehicles/GTI/*.png",
+	"non_vehicle_extras_dataset": "data/non-vehicles/Extras/*.png",
+
+	"test_dataset": "test_images/*.jpg",
+	"output_path": "output_images",
+
+	"shape_serialized": [-1, 12288],
+	"shape_deserialized": [-1, 64, 64, 3],
+
+	"histogram_color_space": "RGB",
+	"histogram_bins_per_channel": 32,
+	"histogram_color_normalize": true,
+
+	"hog_color_space": "YUV",
+	"hog_shape_only": false,
+	"hog_orientations": 9,
+	"hog_window_size": [64, 64],
+	"hog_pixels_per_cell": [8, 8],
+	"hog_cells_per_block": [2, 2],
+	"hog_normalize": true,
+	"hog_block_norm": "L2-Hys",
+
+	"template_color_space": "HSV",
+	"template_size": [16, 16],
+	"template_normalize": false,
+
+	"generate_dataset": true,
+	"sampling_percentange": 1.0,
+	"augmentation": true,
+	"dataset_name": "vehicles",
+	"dataset_path": "output/vehicles/dataset.hdf5",
+
+	"train_classifier": true,
+	"classifier_loss": "squared_hinge",
+	"classifier_C": 0.001,
+	"classifier_path": "output/vehicles/model-linear-svc.cpickle.deployment",
+
+	"sliding_window_pyramid": [
+		[
+			"level1",
+			{
+				"ROI": [0.52, 0.67, 0.1, 0.9],
+				"scale": 1.0,
+				"window_size": [64, 64],
+				"window_step": [ 8,  8]
+			}
+		],
+		[
+			"level2",
+			{
+				"ROI": [0.52, 0.72, 0.08, 0.92],
+				"scale": 1.0,
+				"window_size": [80, 80],
+				"window_step": [20, 11]
+			}
+		],
+		[
+			"level3",
+			{
+				"ROI": [0.52, 0.77, 0.06, 0.94],
+				"scale": 1.0,
+				"window_size": [96, 96],
+				"window_step": [24, 14]
+			}
+		],
+		[
+			"level4",
+			{
+				"ROI": [0.52, 0.82, 0.04, 0.96],
+				"scale": 1.0,
+				"window_size": [112, 112],
+				"window_step": [28, 16]
+			}
+		],
+		[
+			"level5",
+			{
+				"ROI": [0.52, 0.87, 0.02, 0.98],
+				"scale": 1.0,
+				"window_size": [128, 128],
+				"window_step": [32, 18]
+			}
+		]
+	],
+	"confidence_thresh": 0.96,
+	"heat_thresh": 1,
+
+	"spatial_filtering_filter_len": 7,
+	"spatial_filtering_frame_size": [720, 1280],
+
+	"HNM_num_distraction_images": 10,
+	"HNM_window_step": 4,
+	"HNM_pyramid_scale": 1.5,
+	"HNM_min_probability": 0.51,
+	"HNM_dataset_name": "hard_negative_vehicles"
+}
