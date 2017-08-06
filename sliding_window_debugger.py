@@ -120,4 +120,8 @@ if __name__ == "__main__":
 
         cv2.destroyAllWindows()
         cv2.imshow("{}".format(level), canvas)
+        cv2.imwrite(
+            "sliding-window-pyramid-structure-demo-{}.png".format(level),
+            canvas
+        )
         cv2.waitKey(0)
