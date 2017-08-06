@@ -1,5 +1,4 @@
-**Vehicle Detection Project**
-===
+#**Vehicle Detection Project**
 
 The goals of this project are the following:
 
@@ -9,7 +8,7 @@ The goals of this project are the following:
 * Run your pipeline on a video stream on both test_video.mp4 and project_video.mp4 and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
-Histogram of Oriented Gradients (HOG)
+##Histogram of Oriented Gradients (HOG)
 
 ###1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
