@@ -10,7 +10,6 @@ The goals of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 Histogram of Oriented Gradients (HOG)
----
 
 ###1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
@@ -54,7 +53,7 @@ as a single model using GridSearchCV.
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
-<img src="writeup_images/dataset-samples.png" width="64" alt="Dataset Samples" />
+<img src="writeup_images/dataset-samples.png" width="100%" alt="Dataset Samples" />
 
 The following two augmentations are used to improve training set data quality:
 
@@ -68,7 +67,7 @@ After that, HOG description for all three channel components are extracted.
 
 Here is an example using the `YUV` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
-<img src="writeup_images/HOG-demo.png" width="64" alt="HOG Description Demo" />
+<img src="writeup_images/HOG-demo.png" width="100%" alt="HOG Description Demo" />
 
 ###2. Explain how you settled on your final choice of HOG parameters.
 
@@ -189,8 +188,7 @@ with open(conf.classifier_path, 'wb') as model_pkl:
     pickle.dump(best_model_calibrated, model_pkl)
 ```
 
-Sliding Window Search
----
+##Sliding Window Search
 
 ###1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
@@ -342,31 +340,31 @@ Detailed sliding window configuration is contained in my configuration file **co
 ]
 ```
 
-<img src="writeup_images/sliding-window-pyramid-structure-demo-level1.png" alt="Sliding Window Pyramid Demo, Level 1" />
+<img src="writeup_images/sliding-window-pyramid-structure-demo-level1.png" width="100%" alt="Sliding Window Pyramid Demo, Level 1" />
 
-<img src="writeup_images/sliding-window-pyramid-structure-demo-level2.png" alt="Sliding Window Pyramid Demo, Level 2" />
+<img src="writeup_images/sliding-window-pyramid-structure-demo-level2.png" width="100%" alt="Sliding Window Pyramid Demo, Level 2" />
 
-<img src="writeup_images/sliding-window-pyramid-structure-demo-level3.png" alt="Sliding Window Pyramid Demo, Level 3" />
+<img src="writeup_images/sliding-window-pyramid-structure-demo-level3.png" width="100%" alt="Sliding Window Pyramid Demo, Level 3" />
 
-<img src="writeup_images/sliding-window-pyramid-structure-demo-level4.png" alt="Sliding Window Pyramid Demo, Level 4" />
+<img src="writeup_images/sliding-window-pyramid-structure-demo-level4.png" width="100%" alt="Sliding Window Pyramid Demo, Level 4" />
 
-<img src="writeup_images/sliding-window-pyramid-structure-demo-level5.png" alt="Sliding Window Pyramid Demo, Level 5" />
+<img src="writeup_images/sliding-window-pyramid-structure-demo-level5.png" width="100%" alt="Sliding Window Pyramid Demo, Level 5" />
 
 ###2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Here are the detection results on the six test images:
 
-<img src="writeup_images/image-detection-demo-1.png" alt="Image Detection Demo 1" />
+<img src="writeup_images/image-detection-demo-1.png" width="100%" alt="Image Detection Demo 1" />
 
-<img src="writeup_images/image-detection-demo-2.png" alt="Image Detection Demo 2" />
+<img src="writeup_images/image-detection-demo-2.png" width="100%" alt="Image Detection Demo 2" />
 
-<img src="writeup_images/image-detection-demo-3.png" alt="Image Detection Demo 3" />
+<img src="writeup_images/image-detection-demo-3.png" width="100%" alt="Image Detection Demo 3" />
 
-<img src="writeup_images/image-detection-demo-4.png" alt="Image Detection Demo 4" />
+<img src="writeup_images/image-detection-demo-4.png" width="100%" alt="Image Detection Demo 4" />
 
-<img src="writeup_images/image-detection-demo-5.png" alt="Image Detection Demo 5" />
+<img src="writeup_images/image-detection-demo-5.png" width="100%" alt="Image Detection Demo 5" />
 
-<img src="writeup_images/image-detection-demo-6.png" alt="Image Detection Demo 6" />
+<img src="writeup_images/image-detection-demo-6.png" width="100%" alt="Image Detection Demo 6" />
 
 I use the following methods to improve the performance of my classifier:
 
@@ -376,13 +374,12 @@ I use the following methods to improve the performance of my classifier:
 
 3. For each detected region, only the one with confidence(attained through predict_proba of calibrated linear SVM) above the given threshold is used for heatmap accumulation.  
 
-Video Implementation
----
+##Video Implementation
 
 ###1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 Here's the link to project video:
 
-<img src="output_videos/project_video_detected.mp4" width="64" alt="Video Detection Demo" />
+[Vehicle Detection on Videos](output_videos)
 
 ###2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
@@ -394,7 +391,7 @@ I recorded the positions of positive detections in each frame of the video. The 
 
 The code snippet for spatial filtering is as follows:
 
-```
+```python
 def process_image(image):
     # Detect:
     bounding_boxes = detector.detect(
@@ -418,7 +415,7 @@ def process_image(image):
 
 The code snippet for temporal filtering is as follows:
 
-```
+```python
 # Static variable decorator:
 def static_vars(**kwargs):
     def decorate(func):
@@ -510,26 +507,25 @@ def process_frame(frame):
 
 Here's an example result showing the heatmap and the bounding boxes from a series of frames of video:
 
-<img src="writeup_images/spatial-temporal-filtering-frame-1.png" alt="Spatial Temporal Filtering, Frame 1" />
+<img src="writeup_images/spatial-temporal-filtering-frame-1.png" width="100%" alt="Spatial Temporal Filtering, Frame 1" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-2.png" alt="Spatial Temporal Filtering, Frame 2" />
+<img src="writeup_images/spatial-temporal-filtering-frame-2.png" width="100%" alt="Spatial Temporal Filtering, Frame 2" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-3.png" alt="Spatial Temporal Filtering, Frame 3" />
+<img src="writeup_images/spatial-temporal-filtering-frame-3.png" width="100%" alt="Spatial Temporal Filtering, Frame 3" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-4.png" alt="Spatial Temporal Filtering, Frame 4" />
+<img src="writeup_images/spatial-temporal-filtering-frame-4.png" width="100%" alt="Spatial Temporal Filtering, Frame 4" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-5.png" alt="Spatial Temporal Filtering, Frame 5" />
+<img src="writeup_images/spatial-temporal-filtering-frame-5.png" width="100%" alt="Spatial Temporal Filtering, Frame 5" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-6.png" alt="Spatial Temporal Filtering, Frame 6" />
+<img src="writeup_images/spatial-temporal-filtering-frame-6.png" width="100%" alt="Spatial Temporal Filtering, Frame 6" />
 
-<img src="writeup_images/spatial-temporal-filtering-frame-7.png" alt="Spatial Temporal Filtering, Frame 7" />
+<img src="writeup_images/spatial-temporal-filtering-frame-7.png" width="100%" alt="Spatial Temporal Filtering, Frame 7" />
 
 This is the final result after spatial temporal filtering:
 
-<img src="writeup_images/spatial-temporal-filtering-frame-final.png" alt="Spatial Temporal Filtering, Frame Final" />
+<img src="writeup_images/spatial-temporal-filtering-frame-final.png" width="100%" alt="Spatial Temporal Filtering, Frame Final" />
 
-Discussion
----
+##Discussion
 
 ###1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
