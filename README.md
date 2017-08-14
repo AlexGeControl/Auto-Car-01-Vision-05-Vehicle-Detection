@@ -1,4 +1,10 @@
-#**Vehicle Detection Project**
+## README
+
+### Technical Report for Vehicle Detection
+
+---
+
+**Vehicle Detection Project**
 
 The goals of this project are the following:
 
@@ -8,9 +14,11 @@ The goals of this project are the following:
 * Run your pipeline on a video stream on both test_video.mp4 and project_video.mp4 and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
-##Histogram of Oriented Gradients (HOG)
+---
 
-###1. Explain how (and identify where in your code) you extracted HOG features from the training images.
+###Histogram of Oriented Gradients (HOG)
+
+####1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
 The code for this step is contained in the module **vehicle_detection.extractors.HOGTransformer**
 
@@ -68,7 +76,7 @@ Here is an example using the `YUV` color space and HOG parameters of `orientatio
 
 <img src="writeup_images/HOG-demo.png" width="100%" alt="HOG Description Demo" />
 
-###2. Explain how you settled on your final choice of HOG parameters.
+####2. Explain how you settled on your final choice of HOG parameters.
 
 The final HOG params are written in **conf/vehicles.json** as follows:
 
@@ -127,7 +135,7 @@ to correctly detect black cars. So HOG description of all three channel componen
 are finally used to incorporate color info. into feature description;
 3. All the remaining params are determined through GridSearchCV.
 
-###3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 Two linear models, namely logistic regression and linear SVM with probability calibration are trained.
 
@@ -187,9 +195,11 @@ with open(conf.classifier_path, 'wb') as model_pkl:
     pickle.dump(best_model_calibrated, model_pkl)
 ```
 
-##Sliding Window Search
+---
 
-###1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+###Sliding Window Search
+
+####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
 I implemented image pyramid & sliding window in module **vehicle_detection.detectors.image_processing**. The code snippets are as follows
 ```python
@@ -349,7 +359,7 @@ Detailed sliding window configuration is contained in my configuration file **co
 
 <img src="writeup_images/sliding-window-pyramid-structure-demo-level5.png" width="100%" alt="Sliding Window Pyramid Demo, Level 5" />
 
-###2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
+####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Here are the detection results on the six test images:
 
@@ -373,14 +383,16 @@ I use the following methods to improve the performance of my classifier:
 
 3. For each detected region, only the one with confidence(attained through predict_proba of calibrated linear SVM) above the given threshold is used for heatmap accumulation.  
 
-##Video Implementation
+---
 
-###1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
+###Video Implementation
+
+####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 Here's the link to project video:
 
 [Vehicle Detection on Videos](output_videos)
 
-###2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
+####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
 I recorded the positions of positive detections in each frame of the video. The heatmap filtering method provided in video tutorial is used to suppress false-positive detections. Both spatial and temporal filterings are applied:
 
@@ -524,9 +536,11 @@ This is the final result after spatial temporal filtering:
 
 <img src="writeup_images/spatial-temporal-filtering-frame-final.png" width="100%" alt="Spatial Temporal Filtering, Frame Final" />
 
-##Discussion
+---
 
-###1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+###Discussion
+
+####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Here are the problems identified during my iterative training-evaluation process:
 
